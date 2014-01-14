@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js no-svg">
+<head>
+	<meta charset="utf-8" />
+	<title>Framework // Grids</title>
+	<link rel="shortcut icon" href="/framework/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/framework/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/framework/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/framework/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/framework/touch-icon-ipad-retina.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="width" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<link type="text/css" rel="stylesheet" href="/framework/css/style.css" media="all" />
+	<script type="text/javascript" src="/framework/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/framework/js/jquery.flexnav.min.js"></script>
+	<script type="text/javascript" src="/framework/js/html5shiv-printshiv.js"></script>
+	<script type="text/javascript" src="/framework/js/respond.min.js"></script>
+	<script>
+		if (document.implementation.hasFeature(
+			"http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+			document.documentElement.className = "svg";
+		}
+	</script>
+</head>
+<body>
+	<header id="header" class="region">
+		<div class="inner">
+			<h1 class="sitename">Framework</h1>
+		</div>
+	</header>
+	<nav id="navigation" class="region">
+		<div class="inner">
+			<div class="menu-button">Menu</div>
+			<ul class="menu flexnav" data-breakpoint="768">
+				<li><a href="/framework/">Home</a></li>
+				<li><a href="/framework/pages/typography.html">Typography</a></li>
+				<li><a href="/framework/pages/grids.html" class="active">Grids</a></li>
+				<li>
+					<a href="#">Menu item 5</a>
+					<ul>
+						<li>
+							<a href="#">Menu item 5.1</a>
+						</li>
+						<li>
+							<a href="#">Menu item 5.2</a>
+						</li>
+						<li>
+							<a href="#">Menu item 5.3</a>
+						</li>
+						<li>
+							<a href="#">Menu item 5.4</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Menu item 6</a>
+					<ul>
+						<li>
+							<a href="#">Menu item 6.1</a>
+						</li>
+						<li>
+							<a href="#">Menu item 6.2</a>
+						</li>
+						<li>
+							<a href="#">Menu item 6.3</a>
+						</li>
+						<li>
+							<a href="#">Menu item 6.4</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Menu item 7</a>
+					<ul>
+						<li>
+							<a href="#">Menu item 7.1</a>
+						</li>
+						<li>
+							<a href="#">Menu item 7.2</a>
+						</li>
+						<li>
+							<a href="#">Menu item 7.3</a>
+						</li>
+						<li>
+							<a href="#">Menu item 7.4</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<main id="main">
+		<section class="region">
+			<div class="inner">
+				<article id="article">
+					<!-- if not an individual article then make the title h1 a link -->
+					<h1 itemprop="name">
+						Grids
+					</h1>
+
+					<h3>Half columns</h3>
+
+					<div class="grid-row linearise example">
+
+						<div class="grid-item one-half"><div class="content">1/2</div></div>
+						<div class="grid-item one-half"><div class="content">1/2</div></div>
+					</div>
+
+					<h3>Third columns</h3>
+
+					<div class="grid-row linearise example">
+
+						<div class="grid-item one-third"><div class="content">1/3</div></div>
+						<div class="grid-item two-third"><div class="content">2/3</div></div>
+
+
+						<div class="grid-item two-third"><div class="content">2/3</div></div>
+						<div class="grid-item one-third"><div class="content">1/3</div></div>
+
+					</div>
+
+					<h3>Quarter columns</h3>
+
+					<div class="grid-row linearise example">
+
+						<div class="grid-item one-quarter"><div class="content">1/4</div></div>
+						<div class="grid-item three-quarter"><div class="content">3/4</div></div>
+
+						<div class="grid-item two-quarter"><div class="content">2/4</div></div>
+						<div class="grid-item two-quarter"><div class="content">2/4</div></div>
+
+
+						<div class="grid-item three-quarter"><div class="content">3/4</div></div>
+						<div class="grid-item one-quarter"><div class="content">1/4</div></div>
+
+					</div>
+
+					<h3>Fifth columns</h3>
+
+					<div class="grid-row linearise example">
+
+						<div class="grid-item one-fifth"><div class="content">1/5</div></div>
+						<div class="grid-item four-fifth"><div class="content">4/5</div></div>
+
+
+						<div class="grid-item two-fifth"><div class="content">2/5</div></div>
+						<div class="grid-item three-fifth"><div class="content">3/5</div></div>
+
+						<div class="grid-item three-fifth"><div class="content">3/5</div></div>
+						<div class="grid-item two-fifth"><div class="content">2/5</div></div>
+
+
+						<div class="grid-item four-fifth"><div class="content">4/5</div></div>
+						<div class="grid-item one-fifth"><div class="content">1/5</div></div>
+
+
+					</div>
+
+					<h3>Sixth columns</h3>
+
+					<div class="grid-row linearise example">
+
+						<div class="grid-item one-sixth"><div class="content">1/6</div></div>
+						<div class="grid-item five-sixth"><div class="content">5/5</div></div>
+
+						<div class="grid-item two-sixth"><div class="content">2/6</div></div>
+						<div class="grid-item four-sixth"><div class="content">4/6</div></div>
+
+						<div class="grid-item three-sixth"><div class="content">1/6</div></div>
+						<div class="grid-item three-sixth"><div class="content">1/6</div></div>
+
+						<div class="grid-item four-sixth"><div class="content">4/6</div></div>
+						<div class="grid-item two-sixth"><div class="content">2/6</div></div>
+
+						<div class="grid-item five-sixth"><div class="content">5/5</div></div>
+						<div class="grid-item one-sixth"><div class="content">1/5</div></div>
+
+
+					</div>
+
+					<h3>Eighth columns</h3>
+
+					<div class="grid-row linearise example">
+						<div class="grid-item one-eighth"><div class="content">1/8</div></div>
+						<div class="grid-item seven-eighth"><div class="content">7/8</div></div>
+
+						<div class="grid-item two-eighth"><div class="content">2/8</div></div>
+						<div class="grid-item six-eighth"><div class="content">6/8</div></div>
+
+						<div class="grid-item three-eighth"><div class="content">3/8</div></div>
+						<div class="grid-item five-eighth"><div class="content">5/8</div></div>
+
+						<div class="grid-item four-eighth"><div class="content">4/8</div></div>
+						<div class="grid-item four-eighth"><div class="content">4/8</div></div>
+
+						<div class="grid-item five-eighth"><div class="content">5/8</div></div>
+						<div class="grid-item three-eighth"><div class="content">3/8</div></div>
+
+
+						<div class="grid-item six-eighth"><div class="content">6/8</div></div>
+						<div class="grid-item two-eighth"><div class="content">2/8</div></div>
+
+						<div class="grid-item seven-eighth"><div class="content">7/8</div></div>
+						<div class="grid-item one-eighth"><div class="content">1/8</div></div>
+
+					</div>
+
+					<h3>Tenth columns</h3>
+
+					<div class="grid-row linearise example">
+						<div class="grid-item one-tenth"><div class="content">1/10</div></div>
+						<div class="grid-item nine-tenth"><div class="content">9/10</div></div>
+
+						<div class="grid-item two-tenth"><div class="content">2/10</div></div>
+						<div class="grid-item eight-tenth"><div class="content">8/10</div></div>
+
+						<div class="grid-item three-tenth"><div class="content">3/10</div></div>
+						<div class="grid-item seven-tenth"><div class="content">7/10</div></div>
+
+						<div class="grid-item four-tenth"><div class="content">4/10</div></div>
+						<div class="grid-item six-tenth"><div class="content">6/10</div></div>
+
+						<div class="grid-item five-tenth"><div class="content">5/10</div></div>
+						<div class="grid-item five-tenth"><div class="content">5/10</div></div>
+
+						<div class="grid-item six-tenth"><div class="content">6/10</div></div>
+						<div class="grid-item four-tenth"><div class="content">4/10</div></div>
+
+						<div class="grid-item seven-tenth"><div class="content">7/10</div></div>
+						<div class="grid-item three-tenth"><div class="content">3/10</div></div>
+
+						<div class="grid-item eight-tenth"><div class="content">8/10</div></div>
+						<div class="grid-item two-tenth"><div class="content">2/10</div></div>
+
+						<div class="grid-item nine-tenth"><div class="content">9/10</div></div>
+						<div class="grid-item one-tenth"><div class="content">1/10</div></div>
+					</div>
+					<script>
+						if (document.implementation.hasFeature(
+							"http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+							document.documentElement.className = "svg";
+						}
+
+						jQuery(document).ready(function($) {
+
+							$(".grid-row.example .content").hover(function(){
+								var $this = $(this); // caching $(this)
+								var $width = $(this).width();
+								$this.data('initialText', $this.text());
+								$this.text($width + 'px');
+							},function() {
+								var $this = $(this); // caching $(this)
+								$this.text($this.data('initialText'));
+							});
+						});
+					</script>
+				</article>
+			</div>
+		</section>
+	</main>
+	<footer id="footer" class="region">
+		<div class="inner">
+			<div class="grid-row linearise">
+				<div class="grid-item six-tenth">
+					<p>
+						<script>document.write(new Date().getFullYear())</script>
+						&#169; Sed posuere consectetur est at lobortis.
+					</p>
+				</div>
+				<nav class="grid-item four-tenth">
+					<ul class="menu">
+						<li>
+							<a href="#">Terms and conditions</a>
+						</li>
+						<li>
+							<a href="#">Privacy policy</a>
+						</li>
+						<li>
+							<a href="#">Accessibility</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</footer>
+	<script>
+    	$(".flexnav").flexNav();
+</script>
+</body>
+</html>

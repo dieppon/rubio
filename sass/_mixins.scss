@@ -1,0 +1,154 @@
+// import all Compass core mixins
+@import "compass";
+
+// import additional Compass plugins
+@import "recipes/shadow";
+
+// Funtions
+
+// Strip units
+
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+// SVG images with fallback for older browsers (via Modernizr)
+		
+@mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
+	.no-svg &,
+	.no-js & {
+		background-image: url('../images/' + $imgfilename + '.' + $imgtype);
+	}
+	.svg & {
+		background-image: url('../images/' + $imgfilename + '.svg');
+		-webkit-background-size: $imgwidth $imgheight;
+		   -moz-background-size: $imgwidth $imgheight;
+		     -o-background-size: $imgwidth $imgheight;
+		        background-size: $imgwidth $imgheight;
+	}
+}
+
+// higher resolution images for high resolution displays
+		
+@mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
+	$filename: $hdfile + '.' + $hdtype;
+	$hdfilename: $hdfile + '@2x.' + $hdtype;
+	background-image: url('../images/' + $filename);
+	@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+		background-image: url('../images/' + $hdfilename) !important;
+		-webkit-background-size: $hdwidth $hdheight;
+		        background-size: $hdwidth $hdheight;
+	}
+}
+
+// sticky positioning
+
+@mixin position-sticky {
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+}
+
+@mixin hover-brightness {
+	-webkit-filter: brightness(1.1);
+	   -moz-filter: brightness(1.1);
+	    -ms-filter: brightness(1.1);
+	     -o-filter: brightness(1.1);
+	        filter: brightness(1.1);
+}
+
+// flat buttons - flat-button([color-flat-text],[color-flat-background])
+
+@mixin flat-button($text:$color-flat-text,$background:$color-flat-background){
+    color: $text;
+	background: $background;
+	border: 1px solid $background;
+	text-decoration: none;
+	&:hover,
+	&:focus{
+		text-decoration: none;
+		color: $text;
+		background-color: lighten($background, 6%);
+		border: 1px solid lighten($background, 6%);
+	}
+	&:active{
+		color: $text;
+		background-color: $background;
+		border: 1px solid $background;
+	}
+}
+
+// Crossbrowsing min/max widths/heights
+
+@mixin min-width($value){
+	width: auto !important;
+    width: $value;
+    min-width: $value;
+}
+@mixin min-height($value){
+	height: auto !important;
+    height: $value;
+    min-height: $value;
+}
+@mixin max-width($value){
+	width: auto !important;
+    width: $value;
+    max-width: $value;
+}
+@mixin max-height($value){
+	height: auto !important;
+    height: $value;
+    max-height: $value;
+}
+
+// Placeholder
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+// Selection
+
+@mixin selection($color:inherit, $background:inherit) {
+	$prefixes: ("-moz-", "-webkit-", "-o-", "-ms-", "");
+	@if $color == 'none' {
+		-webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+	}
+	@else {
+		@each $prefix in $prefixes {
+			&::#{$prefix}selection {
+				color: $color;
+				background: $background;
+			}
+		}
+	}
+}
+
+// RGBa background
+
+@mixin background-rgba($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  // Fallback for web browsers that doesn't support RGBa
+  background-color: $color;
+  // Reset background to transparent only in IE 6-8 using the backslash 9 hack http://webdood.com/?p=57
+  background-color: transparent\9;
+  // RGBa with $alpha opacity
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+  	// Remove filter in IE9
+	&:nth-child(n) {
+		filter: none;
+	}
+}

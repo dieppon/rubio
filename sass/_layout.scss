@@ -1,0 +1,40 @@
+/* @group Layout */
+*{
+	@include box-sizing(border-box);
+}
+
+.region{
+	width: 100%;
+	padding: 40px 0;
+	.inner{
+		width: 100%;
+		max-width: 1020px;
+		margin: 0 auto;
+		padding: 0 20px;
+	
+		&:before,
+		&:after{
+			display: table;
+			content: "";
+			line-height: 0;
+		}
+		&:after{
+			clear: both;
+		}
+	}
+}
+#navigation{
+	background: #f4f4f4;
+	padding: 0;
+}
+#footer{
+	padding-top: 0;
+	nav{
+		float: left;
+	}
+}
+img, video, audio, canvas{
+	max-width: 100%;
+}
+
+/* @end */

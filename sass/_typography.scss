@@ -1,0 +1,44 @@
+/* @group Typpography */
+body{
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6{
+	line-height: normal;
+	max-width: 100%;
+}
+
+h1{
+	font-size: 3.157em;
+	margin-top: 0;
+	margin-bottom: 0.25em;
+}
+h2{
+	font-size: 2.369em;
+	margin-bottom: 0.32em;
+}
+h3{
+	font-size: 1.777em;
+	margin-bottom: 0.45em;
+}
+h4{
+	font-size: 1.333em;
+	margin-bottom: 0.6em;
+}
+h5{
+	font-size: 1em;
+	margin-bottom: 0.8em;
+}
+h6{
+	font-size: 0.75em;
+	margin-bottom: 0.8em;
+}
+p, address, pre, details{
+	margin-bottom: 0.8em;
+}
+ol, ul{
+	padding-left: 1.3em;
+	margin-bottom: 0.8em;
+}
+/* @end */
