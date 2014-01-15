@@ -1,0 +1,10 @@
+/* @group Fonts */
+
+// Escolar
+@include font-face("Escolar", font-files("/rubio/fonts/Escolar-Rubio/Escolar-Rubio.woff", "/rubio/fonts/Escolar-Rubio/Escolar-Rubio.ttf", "/rubio/fonts/Escolar-Rubio/Escolar-Rubio.svg"), "/rubio/fonts/Escolar-Rubio/Escolar-Rubio.eot", 400, normal);
+@include font-face("Escolar", font-files("/rubio/fonts/Escolar-Rubio/EscolFin.woff", "/rubio/fonts/Escolar-Rubio/EscolFin.ttf", "/rubio/fonts/Escolar-Rubio/EscolFin.svg"), "/rubio/fonts/Escolar-Rubio/EscolFin.eot", 100, normal);
+
+// Neuzeit Grotesk
+@include font-face("Neuzeit Grotesk", font-files("/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.woff", "/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.ttf", "/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.svg"), "/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.eot", 400, normal);
+
+/* @end */

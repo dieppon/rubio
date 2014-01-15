@@ -17,7 +17,7 @@ u, ins { text-decoration: underline; }
 
 abbr[title], dfn[title] { cursor: help; border-bottom: 1px dotted; }
 
-/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 8/9. */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -137,11 +137,16 @@ textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 table { border-collapse: collapse; border-spacing: 0; }
 
 /* @end */
+/* @group Fonts */
+@font-face { font-family: "Escolar"; src: url(/rubio/fonts/Escolar-Rubio/Escolar-Rubio.eot); src: url(/rubio/fonts/Escolar-Rubio/Escolar-Rubio.eot?#iefix) format('embedded-opentype'), url(/rubio/fonts/Escolar-Rubio/Escolar-Rubio.woff) format('woff'), url(/rubio/fonts/Escolar-Rubio/Escolar-Rubio.ttf) format('truetype'), url(/rubio/fonts/Escolar-Rubio/Escolar-Rubio.svg) format('svg'); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Escolar"; src: url(/rubio/fonts/Escolar-Rubio/EscolFin.eot); src: url(/rubio/fonts/Escolar-Rubio/EscolFin.eot?#iefix) format('embedded-opentype'), url(/rubio/fonts/Escolar-Rubio/EscolFin.woff) format('woff'), url(/rubio/fonts/Escolar-Rubio/EscolFin.ttf) format('truetype'), url(/rubio/fonts/Escolar-Rubio/EscolFin.svg) format('svg'); font-weight: 100; font-style: normal; }
+@font-face { font-family: "Neuzeit Grotesk"; src: url(/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.eot); src: url(/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.eot?#iefix) format('embedded-opentype'), url(/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.woff) format('woff'), url(/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.ttf) format('truetype'), url(/rubio/fonts/Neuzeit-Grotesk/neuzeitgrotbla-webfont.svg) format('svg'); font-weight: 400; font-style: normal; }
+/* @end */
 /* @group Grid */
 .grid-row { list-style: none; margin: 0; padding: 0; margin-left: -30px; *zoom: 1; }
 .grid-row:before, .grid-row:after { display: table; content: ""; line-height: 0; }
 .grid-row:after { clear: both; }
-.grid-row .grid-item { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-height: 1px; float: left; padding-left: 30px; vertical-align: top; }
+.grid-row .grid-item { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 1px; float: left; padding-left: 30px; vertical-align: top; }
 .grid-row .grid-item.one-half { width: 50%; }
 .grid-row .grid-item.one-third { width: 33.333%; }
 .grid-row .grid-item.two-third { width: 66.666%; }
@@ -226,9 +231,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* @end */
 /* @group Typpography */
-body { font-size: 16px; line-height: 1.5em; }
+body { font-family: Escolar, sans-serif; font-size: 16px; line-height: 1.5em; }
 
-h1, h2, h3, h4, h5, h6 { line-height: normal; max-width: 100%; }
+h1, h2, h3, h4, h5, h6 { font-family: "Neuzeit Grotesk", sans-serif; line-height: normal; max-width: 100%; }
 
 h1 { font-size: 3.157em; margin-top: 0; margin-bottom: 0.25em; }
 
@@ -248,7 +253,7 @@ ol, ul { padding-left: 1.3em; margin-bottom: 0.8em; }
 
 /* @end */
 /* @group Layout */
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .region { width: 100%; padding: 40px 0; }
 .region .inner { width: 100%; max-width: 1020px; margin: 0 auto; padding: 0 20px; }
